@@ -15,18 +15,18 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Throw",
+                    "name": "Jump",
                     "type": "Button",
-                    "id": "391d264c-a6cd-4b8e-863c-69e548c14502",
+                    "id": "e5d2ae5b-df5b-4100-b344-7e48282819d7",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Jump",
+                    "name": "Throw",
                     "type": "Button",
-                    "id": "e5d2ae5b-df5b-4100-b344-7e48282819d7",
+                    "id": "391d264c-a6cd-4b8e-863c-69e548c14502",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -58,7 +58,7 @@
                 },
                 {
                     "name": "up",
-                    "id": "811f1688-580e-4a7a-8edf-d2a33c9211ac",
+                    "id": "f4f911c0-e697-4da1-86db-32da05cae480",
                     "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
@@ -69,7 +69,7 @@
                 },
                 {
                     "name": "down",
-                    "id": "f4f911c0-e697-4da1-86db-32da05cae480",
+                    "id": "6f6ee462-142b-4fe4-90cc-e75ae8fb7668",
                     "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
@@ -113,7 +113,7 @@
                 },
                 {
                     "name": "up",
-                    "id": "6e40d19c-087c-4cc2-965f-4483d7458f65",
+                    "id": "cbdb0bbe-7a70-4eb5-b84a-fe086b6dd77f",
                     "path": "<Keyboard>/upArrow",
                     "interactions": "",
                     "processors": "",
@@ -124,7 +124,7 @@
                 },
                 {
                     "name": "down",
-                    "id": "cbdb0bbe-7a70-4eb5-b84a-fe086b6dd77f",
+                    "id": "f12ce8e0-8b90-4325-bdaf-35f871b0e541",
                     "path": "<Keyboard>/downArrow",
                     "interactions": "",
                     "processors": "",
@@ -168,7 +168,7 @@
                 },
                 {
                     "name": "up",
-                    "id": "f08b440b-e2df-45ae-8c47-2f0ace854441",
+                    "id": "69afc8f0-9d34-4101-baeb-fc7b7846c1b2",
                     "path": "<Gamepad>/dpad/up",
                     "interactions": "",
                     "processors": "",
@@ -179,7 +179,7 @@
                 },
                 {
                     "name": "down",
-                    "id": "69afc8f0-9d34-4101-baeb-fc7b7846c1b2",
+                    "id": "af0055bc-9b5a-4832-850e-51b7299b3080",
                     "path": "<Gamepad>/dpad/down",
                     "interactions": "",
                     "processors": "",
@@ -213,7 +213,7 @@
                 {
                     "name": "",
                     "id": "47e0e41c-a857-40aa-a532-d5be0b6000e2",
-                    "path": "<Keyboard>/space",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -246,7 +246,7 @@
                 {
                     "name": "",
                     "id": "f794cade-12ab-4cab-b4d1-c761a422cda2",
-                    "path": "<Keyboard>/w",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

@@ -6,49 +6,77 @@ using UnityEngine.InputSystem;
 
 public class Player2DController : MonoBehaviour
 {
-    public Rigidbody rb;
+    public Rigidbody2D rb;
     public Transform groundCheck;
     public LayerMask groundLayer;
     
     private float horizontal;
     [SerializeField] private float speedMovement;
     [SerializeField] private float jumpForce;
-    private bool isGrounded;
     private bool isFacingRight;
+
+    [SerializeField] private BooleanVariable hasABomb;
     
-// Start is called before the first frame update
-    void Awake()
-    {
-        
-    }
 
-    private void Start()
-    {
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        //Move
-        Movement();
-        //Jump
-        if (isGrounded)
+        rb.velocity = new Vector2(horizontal * speedMovement, rb.velocity.y);
+        if (!isFacingRight && horizontal > 0f)
         {
-            Jump();
+            Flip();
+        }
+        else if (!isFacingRight && horizontal < 0f)
+        {
+            Flip();
         }
     }
 
+    private void Flip()
+    {
+        isFacingRight = !isFacingRight;
+        Vector3 localScale = transform.localScale;
+        localScale.x *= -1f;
+        transform.localScale = localScale;
+    }
+    public void Movement(InputAction.CallbackContext context)
+    {
+        horizontal = context.ReadValue<Vector2>().x;
+    }
+
+    public void Jump(InputAction.CallbackContext context)
+    {
+        if (context.performed && IsGrounded())
+        {
+            Debug.Log("Salte");
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        }
+        if (context.canceled && rb.velocity.y > 0f)
+        {
+            Debug.Log("ya no puedo Saltar");
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+        }
+    }
     private bool IsGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
-    void Movement()
+    public void Attack(InputAction.CallbackContext context)
     {
-        
+        if (context.performed && hasABomb)
+        {
+            Debug.Log("Lanzar bomba");
+        }
+        else if(context.performed && !hasABomb)
+        {
+            Debug.Log("No has encontrado la bomba");
+        }
     }
 
-    void Jump()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.tag == "bomb")
+        {
+            hasABomb.Value = true;
+        }
     }
 }

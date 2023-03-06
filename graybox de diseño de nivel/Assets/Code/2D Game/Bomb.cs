@@ -1,9 +1,10 @@
+using System;
 using UnityEngine.Events;
 using UnityEngine;
 
 public class Bomb : MonoBehaviour, IUsable
 {
-   [SerializeField] private booleanVariable isBomb;
+   [SerializeField] BooleanVariable  isBomb;
    public UnityEvent OnUse;
    public bool CanInteract
    {
@@ -16,5 +17,10 @@ public class Bomb : MonoBehaviour, IUsable
       {
          OnUse.Invoke();
       }
+   }
+
+   private void Start()
+   {
+      isBomb.Value = false;
    }
 }
