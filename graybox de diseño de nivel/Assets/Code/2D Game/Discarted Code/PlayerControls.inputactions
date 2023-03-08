@@ -245,12 +245,12 @@
                 },
                 {
                     "name": "",
-                    "id": "f794cade-12ab-4cab-b4d1-c761a422cda2",
+                    "id": "c3b58e0c-6fc5-4d96-86d9-87ec1fbfc984",
                     "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Jump",
+                    "action": "Throw",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
